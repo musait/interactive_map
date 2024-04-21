@@ -1,0 +1,15 @@
+<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+<%= javascript_pack_tag 'map' %>
+<%= csrf_meta_tags %>
+
+<div id="map"></div>
+
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    initializeMap(
+      "<%= asset_path('map.png') %>",
+      "<%= asset_path('marker-icon.png') %>",
+      "<%= asset_path('marker-shadow.png') %>"
+    );
+  });
+</script>
